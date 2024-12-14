@@ -9,7 +9,6 @@ class Category {
         $this->db = (new Database())->connect();
     }
 
-    // Store a new category
     public function store($name, $description, $user_id) {
         try {
             $stmt = $this->db->prepare("
@@ -28,10 +27,8 @@ class Category {
         }
     }
 
-    // Retrieve all categories for a user, including tasks
     public function getAll($user_id) {
         try {
-            // Fetch all categories for the user
             $stmt = $this->db->prepare("
                 SELECT id, name, description 
                 FROM categories 
@@ -42,7 +39,6 @@ class Category {
             $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             foreach ($categories as &$category) {
-                // Fetch tasks for each category, include start_date, end_date, and order by is_pinned
                 $stmt = $this->db->prepare("
                     SELECT id, title, description, status, category_id, start_date, end_date, is_pinned
                     FROM tasks 
@@ -61,7 +57,6 @@ class Category {
         }
     }
 
-    // Update a category
     public function update($category_id, $name, $description) {
         try {
             $stmt = $this->db->prepare("
@@ -81,7 +76,6 @@ class Category {
         }
     }
 
-    // Soft delete a category
     public function softDelete($category_id) {
         try {
             $stmt = $this->db->prepare("

@@ -1,12 +1,10 @@
 $(document).ready(function () {
-    // Fetch profile data
     $.ajax({
-        url: '/api/profile', // Route defined in your router
+        url: '/api/profile',
         method: 'GET',
         dataType: 'json',
         success: function (response) {
             if (response.status === 'success') {
-                // Populate the page with profile data
                 const data = response.data;
                 $('#username').text(data.username);
                 $('#name').text(data.name);

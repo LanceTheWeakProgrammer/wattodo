@@ -17,7 +17,6 @@
         </div>
 </div>
 
-<!-- Add a category -->
 <div class="modal fade" id="addCategoryModal" tabindex="-1" aria-labelledby="addCategoryModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -45,7 +44,6 @@
     </div>
 </div>
 
-<!-- Delete a task -->
 <div class="modal fade" id="deleteTaskModal" tabindex="-1" aria-labelledby="deleteTaskModalLabel"  aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">

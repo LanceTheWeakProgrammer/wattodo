@@ -59,11 +59,11 @@ To run WattoDo locally, follow these steps:
    The script creates a backup file containing your current tasks and plans, ensuring no data is lost.
 
 4. **Restore Your Data**
-   To restore a backup to a new database, use the `restore.php` script. This will prompt you for the database name and restore the data from the selected backup file:
+   To restore a backup, use the `restore.php` script. This will prompt you to choose between restoring to a new database or an existing database:
    ```bash
    php restore.php
    ```
-   Follow the on-screen instructions to choose a backup file and provide the name of the database to restore to.
+   Follow the on-screen instructions to choose a backup file, select the type of restoration, and provide the name of the database.
 
    #### Example Demo:
    ```bash
@@ -72,12 +72,19 @@ To run WattoDo locally, follow these steps:
    **Output:**
    ```
    Available backup files:
-   [0] backup_2024-12-14_14-22-06.sql
-   [1] backup_2024-12-14_14-43-45.sql
-   Enter the number of the backup file to restore: 1
-   Enter the database name to restore to: restored_db
-   Database `restored_db` created successfully.
-   Database restored successfully from: storage/backup_2024-12-14_14-43-45.sql
+   [3] backup_2024-12-14_14-52-14.sql
+   [4] backup_2024-12-14_15-31-55.sql
+   Enter the number of the backup file to restore (or enter / to cancel): 3
+   Would you like to:
+   [1] Restore to a new database
+   [2] Restore to an existing database
+   [/] Cancel
+   Enter your choice: 2
+   Enter the name of the existing database to restore to: restore_db
+   Restoring to the existing database: restore_db
+   Database `restore_db` created successfully.
+   Database restored successfully from: C:\Users\HomePC\Desktop\wattodo/storage/backup_2024-12-14_14-52-14.sql
+   Database restoration to `restore_db` completed successfully.
    ```
 
 ### Accessing the Application

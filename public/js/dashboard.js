@@ -25,15 +25,12 @@ $(document).ready(function () {
                     const pending = data.data.task_stats.Pending || 0;
                     const total = completed + pending;
 
-                    // Calculate percentages
                     const completedPercentage = total > 0 ? Math.round((completed / total) * 100) : 0;
                     const pendingPercentage = 100 - completedPercentage;
 
-                    // Update percentages in the HTML
                     $('#completed-percentage').text(`${completedPercentage}%`);
                     $('#pending-percentage').text(`${pendingPercentage}%`);
 
-                    // Update progress bar widths
                     $('.progress-bar.bg-success')
                         .css('width', `${completedPercentage}%`)
                         .text(`${completedPercentage}%`);
@@ -41,7 +38,6 @@ $(document).ready(function () {
                         .css('width', `${pendingPercentage}%`)
                         .text(`${pendingPercentage}%`);
 
-                    // Update Today's Focus tasks
                     const tasksToday = data.data.tasks_today;
                     const tasksTodayList = tasksToday.map(task => `
                         <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -51,7 +47,6 @@ $(document).ready(function () {
                     `).join('');
                     $('#tasks-today-list').html(tasksTodayList);
 
-                    // Update Pinned Tasks
                     const pinnedTasks = data.data.pinned_tasks;
                     const pinnedTasksList = pinnedTasks.map(task => `
                         <li class="list-group-item d-flex justify-content-between align-items-center">

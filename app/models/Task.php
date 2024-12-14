@@ -9,7 +9,6 @@ class Task {
         $this->db = (new Database())->connect();
     }
 
-    // Store a new task
     public function store($title, $description, $category_id, $user_id, $start_date, $end_date) {
         try {
             $stmt = $this->db->prepare("
@@ -31,7 +30,6 @@ class Task {
         }
     }
 
-    // Retrieve all tasks for a user
     public function getAll($user_id) {
         try {
             $stmt = $this->db->prepare("
@@ -48,7 +46,6 @@ class Task {
         }
     }
 
-    // Retrieve a specific task by ID
     public function getById($task_id) {
         try {
             $stmt = $this->db->prepare("
@@ -67,7 +64,6 @@ class Task {
         }
     }
 
-    // Update a task
     public function update($task_id, $title, $description, $category_id, $start_date, $end_date) {
         try {
             $stmt = $this->db->prepare("
@@ -93,7 +89,6 @@ class Task {
         }
     }
 
-    //Mark as complete
     public function complete($task_id) {
         try {
             $stmt = $this->db->prepare("
@@ -111,7 +106,6 @@ class Task {
         }
     } 
 
-    // Soft delete a task
     public function softDelete($task_id) {
         try {
             $stmt = $this->db->prepare("
@@ -129,7 +123,6 @@ class Task {
         }
     }
 
-    // Pin a task
     public function pin($task_id) {
         try {
             $stmt = $this->db->prepare("

@@ -12,12 +12,6 @@ require_once 'app/middleware/Authenticate.php';
 
 require_once 'core/Database.php';
 
-$db = new Database();
-
-$backupFilePath = __DIR__ . '/../storage/backup_' . date('Y-m-d_H-i-s') . '.sql';
-
-$db->backupDatabase($backupFilePath);
-
 $router = new Router();
 $authController = new AuthController();
 $taskController = new TaskController();

@@ -39,7 +39,6 @@
 </div>
 
 <div class="row mt-4">
-    <!-- Today's Focus -->
     <div class="col-md-6 mb-4">
         <div class="card shadow-sm">
             <div class="card-header bg-main text-white">
@@ -47,14 +46,12 @@
             </div>
             <div class="card-body">
                 <ul class="list-group" id="tasks-today-list">
-                    <!-- Dynamically populated -->
                 </ul>
                 <p class="mt-3 text-muted text-center">Focus on completing today's priority tasks!</p>
             </div>
         </div>
     </div>
 
-    <!-- Pinned Tasks -->
     <div class="col-md-6">
         <div class="card shadow-sm">
             <div class="card-header bg-main text-white">
@@ -62,7 +59,6 @@
             </div>
             <div class="card-body">
                 <ul class="list-group" id="pinned-tasks-list">
-                    <!-- Dynamically populated -->
                 </ul>
                 <p class="mt-3 text-muted text-center">Keep your most important tasks at the top!</p>
             </div>

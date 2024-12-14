@@ -8,13 +8,11 @@
     <div class="container">
         <div class="d-flex justify-content-center align-items-center vh-100">
             <div class="row w-100">
-                <!-- Left Side: WattoDo? Section -->
                 <div class="col-md-6 d-flex flex-column align-items-center justify-content-center text-center">
                     <img src="/public/images/WattoDo.svg" alt="WattoDo Logo" width="200" height="200">
                     <h2>WattoDo</h2>
                     <p class="text-muted">Your ultimate to-do list app to stay organized and productive.</p>
                 </div>
-                <!-- Right Side: Register Form -->
                 <div class="col-md-6 d-flex justify-content-center align-items-center">
                     <div class="form-container card shadow-sm w-100 mx-3">
                         <div class="d-flex align-items-center px-3 pt-3">
@@ -24,7 +22,7 @@
                         <div class="px-3 pb-2">
                             <hr class="divider">
                             <form id="registerForm">
-                                <!-- Error messages will be prepended dynamically -->
+
                                 <div class="my-3">
                                     <label for="username" class="form-label">Username</label>
                                     <input type="text" id="username" class="form-control" name="username" placeholder="Enter your username">
